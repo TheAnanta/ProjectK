@@ -2,7 +2,7 @@
       <div>
         <v-navigation-drawer
           :width="100"
-          style="background-color: #141218; color: #CAC4D0; display: flex; flex-direction: column; justify-content: space-between; align-items: center; gap: 40px;"
+          style="background-color: #141218; color: var(--primary-txt-color); display: flex; flex-direction: column; justify-content: space-between; align-items: center; gap: 40px;"
         >
           <!-- Menu FAB Section -->
           <div class="menu-fab" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 14px;">

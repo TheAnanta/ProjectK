@@ -1,10 +1,10 @@
 <template>
     <div
-        style="width: 100vw; height: 360px; background-color: #4F378A; padding: 10px 40px 30px 130px; position: relative;">
+        style="width: 100vw; height: 360px; background-color: var(--primary-bg-color); padding: 10px 40px 30px 130px; position: relative;">
         <v-col>
             <v-row justify="space-between" style="margin: 0;">
                 <img src="/logo/theananta-logo.png" alt="theananta logo" width="70.px" height="36px">
-                <v-btn variant="tonal" style="background-color: #6750A4; border-radius: 100px; color: #D0BCFE;">
+                <v-btn variant="tonal" style="background-color: var(--primary-color); border-radius: 100px; color: var(--quadnary-color);">
                     Sign in
                 </v-btn>
             </v-row>
@@ -22,17 +22,17 @@
                 </p>
 
                 <v-row style="gap: 20px;">
-                    <v-btn variant="tonal" style="background-color: #D0BCFE; border-radius: 100px; color: #381E72;">
+                    <v-btn variant="tonal" style="background-color: var(--quadnary-color); border-radius: 100px; color: var(--secondary-color);">
                         Host an event
                     </v-btn>
-                    <v-btn variant="outlined" style="border-color: #938F99; border-radius: 100px; color: #D0BCFE;">
+                    <v-btn variant="outlined" style="border-color: #938F99; border-radius: 100px; color: var(--quadnary-color );">
                         Learn more
                     </v-btn>
                 </v-row>
             </div>
         </v-col>
         <div
-            style="width: 110vw; height: 50px; background-color: #361F75; padding: 0px 10px; display: flex; justify-content: center; align-items: center; position: absolute; bottom: 0; left: 30px; rotate: -13deg;">
+            style="width: 110vw; height: 50px; background-color: var(--tertiary-color); padding: 0px 10px; display: flex; justify-content: center; align-items: center; position: absolute; bottom: 0; left: 30px; rotate: -13deg;">
             <p style="color: white; font-size: 16px; font-weight: 500; text-wrap: nowrap;">
                 ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE
                 • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div
-        style="width: 100vw; height: 50px; background-color: #6750A4; padding: 0px 10px; display: flex; justify-content: center; align-items: center; z-index: 10; position: relative;">
+        style="width: 100vw; height: 50px; background-color: var(--primary-color); padding: 0px 10px; display: flex; justify-content: center; align-items: center; z-index: 10; position: relative;">
         <p style="color: white; font-size: 16px; font-weight: 500; text-wrap: nowrap;">
             ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE
             • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE
