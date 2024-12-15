@@ -1,5 +1,5 @@
 <template>
-      <div>
+      <div class="navigationRail">
         <v-navigation-drawer
           :width="100"
           style="background-color: #141218; color: var(--primary-txt-color); display: flex; flex-direction: column; justify-content: space-between; align-items: center; gap: 40px;"
@@ -49,5 +49,14 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
+}
+.navigationRail{
+    display: block;
+  }
+
+@media screen and (max-width: 500px) {
+  .navigationRail{
+    display: none;
+  }
 }
 </style>
