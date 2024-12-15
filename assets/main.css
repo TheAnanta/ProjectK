@@ -1,0 +1,27 @@
+body {
+  background-color: #141218;
+}
+
+.v-navigation-drawer__content{
+  height: 0;
+}
+
+@font-face {
+  font-family: "google-sans";
+  src: url("./fonts/google-font.woff2") format("woff2");
+  font-display: swap;
+}
+
+.google-font {
+  font-family: "google-sans", Helvetica, Arial, Sans-Serif;
+}
+
+:root{
+  font-family: "google-sans", Helvetica, Arial, Sans-Serif;
+  --primary-color : #6750A4;
+  --secondary-color : #381E72;
+  --tertiary-color : #361F75;
+  --quadnary-color : #D0BCFE;
+  --primary-txt-color: #CAC4D0;
+  --primary-bg-color: #4F378A;
+}
