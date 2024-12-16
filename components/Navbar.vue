@@ -1,5 +1,5 @@
 <template>
-    <v-row style="margin: 0; padding: 12px 16px;" class="navbar">
+    <v-row style="margin: 0; padding: 12px 16px; position: fixed;" class="navbar">
         <v-icon class="menu" style="color: var(--primary-txt-color)">mdi-menu</v-icon>
         <p class="navTitle" style="font-weight: 400; font-size: 22px; color: var(--secondary-txt-color);">#ProjectK</p>
         <v-icon
@@ -9,6 +9,7 @@
 
 <style>
 .navbar {
+    width: 100vw;
     justify-content: end;
 }
 

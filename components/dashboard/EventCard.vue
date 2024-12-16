@@ -1,5 +1,8 @@
 <template>
     <div class=""
+        @click="() => {
+            router.push(`/event?eventId=${data.id}`)
+        }"
         :style="{ height: '300px', border: '2px solid #49454f', borderRadius: '12px', position: 'relative', padding: '10px', overflow: 'hidden' }">
         
         <!-- Grayscale background image -->
@@ -67,11 +70,13 @@
 </template>
 
 <script setup>
+const router = useRouter();
 const props = defineProps({
     data: {
         type: Object,
         required: true,
         default: () => ({
+            id: 0,
             title: '',
             subTitle: '',
             eventDate: '',
