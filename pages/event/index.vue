@@ -11,20 +11,20 @@
                     </div>
                     <EventPageHead :data="eventData" :is-scrolled="isScrolled" :scroll-y="scrollY" />
                     <v-card style="background-color: var(--secondary-bg-color); color: var(--primary-txt-color);">
-                        <v-tabs v-model="tab" align-tabs="center" :color="'#D0BCFE'">
+                        <v-tabs v-model="tab" align-tabs="center" :color="'#D0BCFE'" height="60px" style="border-bottom: 1px solid var(--tertiary-txt-color);" >
                             <v-tab v-for="(item, index) in eventTabsHeads" :key="index">{{ item.title }}</v-tab>
                         </v-tabs>
 
-                        <v-card-text>
+                        <v-card-text style="padding: 0;">
                             <v-tabs-window v-model="tab">
-                                <v-tabs-window-item value="GENERAL">
+                                <v-tabs-window-item value="GENERAL" style="padding: 0px 2rem;">
                                     <TabsGeneralTab />
                                     <TabsGalleryTab />
                                 </v-tabs-window-item>
                                 <v-tabs-window-item value="TICKETS">
                                     <!-- <TabsAgendaTab /> -->
                                 </v-tabs-window-item>
-                                <v-tabs-window-item value="AGENDA">
+                                <v-tabs-window-item value="AGENDA" style="width: 100%;">
                                     <TabsAgendaTab />
                                 </v-tabs-window-item>
 
