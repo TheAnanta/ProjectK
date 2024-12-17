@@ -11,18 +11,21 @@
                     </div>
                     <EventPageHead :data="eventData" :is-scrolled="isScrolled" :scroll-y="scrollY" />
                     <v-card style="background-color: var(--secondary-bg-color); color: var(--primary-txt-color);">
-                        <v-tabs v-model="tab" align-tabs="center" :color="'#D0BCFE'">
+                        <v-tabs v-model="tab" align-tabs="center" :color="'#D0BCFE'" height="60px" style="border-bottom: 1px solid var(--tertiary-txt-color);" >
                             <v-tab v-for="(item, index) in eventTabsHeads" :key="index">{{ item.title }}</v-tab>
                         </v-tabs>
 
-                        <v-card-text>
+                        <v-card-text style="padding: 0;">
                             <v-tabs-window v-model="tab">
-                                <v-tabs-window-item value="GENERAL">
+                                <v-tabs-window-item value="GENERAL" style="padding: 0px 2rem;">
                                     <TabsGeneralTab />
                                     <TabsGalleryTab />
                                 </v-tabs-window-item>
                                 <v-tabs-window-item value="TICKETS">
-                                    <TabsTicketsTab />
+                                    <!-- <TabsAgendaTab /> -->
+                                </v-tabs-window-item>
+                                <v-tabs-window-item value="AGENDA" style="width: 100%;">
+                                    <TabsAgendaTab />
                                 </v-tabs-window-item>
 
                             </v-tabs-window>
@@ -30,9 +33,13 @@
                     </v-card>
                 </div>
             </div>
-            <!-- Floating Button -->
-            <v-fab icon="mdi-pencil" variant="tonal"
-                style="position: absolute; bottom: 50px; right: 70px; font-size: small;" :color="'#D0BCFE'"></v-fab>
+            <!-- Floating Button | TODO: Modify this according to the Tab -->
+            <v-fab 
+                :icon="tab === 0 ? 'mdi-pencil' : tab === 2 ? 'mdi-plus' : 'mdi-pencil'"
+                style="position: fixed; bottom: 50px; right: 70px; font-size: small; border-radius: 32% !important" 
+                :color="'#36343B'"
+                >
+            </v-fab>
         </NuxtLayout>
     </v-app>
 </template>
@@ -47,7 +54,7 @@ const router = useRouter();
 const isScrolled = ref(false);
 const scrollY = ref(0);
 const eventData = ref(null);
-const tab = ref('TICKETS')
+const tab = ref('GENERAL')
 // const {eventTabsHeads} = useJSONData();
 
 const eventDetails = [
@@ -118,9 +125,13 @@ onUnmounted(() => {
 
 const handleScroll = () => {
     scrollY.value = window.scrollY;
-    console.log('scroll value = ',window.scrollY );
+    // console.log('scroll value = ',window.scrollY );
     isScrolled.value = window.scrollY > 0;
-    console.log('isScrolled  = ', isScrolled.value);
+    // console.log('isScrolled  = ', isScrolled.value);
 };
+
+watch(tab, (val) => {
+    console.log('Changed tab value = ', val);
+})
 
 </script>
