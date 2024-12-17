@@ -22,7 +22,10 @@
                                     <TabsGalleryTab />
                                 </v-tabs-window-item>
                                 <v-tabs-window-item value="TICKETS">
-                                    <TabsTicketsTab />
+                                    <!-- <TabsAgendaTab /> -->
+                                </v-tabs-window-item>
+                                <v-tabs-window-item value="AGENDA">
+                                    <TabsAgendaTab />
                                 </v-tabs-window-item>
 
                             </v-tabs-window>
@@ -30,9 +33,9 @@
                     </v-card>
                 </div>
             </div>
-            <!-- Floating Button -->
+            <!-- Floating Button | TODO: Modify this according to the Tab -->
             <v-fab icon="mdi-pencil" variant="tonal"
-                style="position: absolute; bottom: 50px; right: 70px; font-size: small;" :color="'#D0BCFE'"></v-fab>
+                style="position: fixed; bottom: 50px; right: 70px; font-size: small;" :color="'#D0BCFE'"></v-fab>
         </NuxtLayout>
     </v-app>
 </template>

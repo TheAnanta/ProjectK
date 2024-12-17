@@ -22,9 +22,14 @@ body {
   --secondary-color : #381E72;
   --tertiary-color : #361F75;
   --quadnary-color : #D0BCFE;
+  --quinary-color : #65558F;
   --primary-txt-color: #CAC4D0;
   --primary-bg-color: #4F378A;
   --secondary-bg-color: #141218;
   --secondary-txt-color: #E6E0E9;
+  --tertiary-txt-color: #49454F;
+  --quadnary-txt-color: #4A4459;
   --primary-border-color: #938F99;
+  --primary-chip-color: #E8DEF8;
+  --primary-red-color: #F2B8B5;
 }
