@@ -1,6 +1,5 @@
 <template>
-    <div
-        style="width: 100%; display: flex; flex-direction: column; justify-content: center; padding: 2rem 1rem 2rem 1rem;">
+    <div class="main-container" style="width: 100%; display: flex; flex-direction: column; justify-content: center;">
 
         <!-- Speakers -->
         <div style="width: 100%;  display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -8,33 +7,36 @@
                 style="font-weight: 500; font-size: 14px; letter-spacing: 0.1px; margin-bottom: 16px; color: white; text-align: left; width: 100%;">
                 Speakers</p>
 
-            <div style="display: flex; flex-wrap: wrap; justify-content: start; align-items: start; gap: 16px;">
+            <div class="speakers-container"
+                >
                 <TabsSpeakerCard v-for="(item, index) in speakersData" :key="index" :data="item" />
             </div>
         </div>
 
         <!-- Call for papers -->
-        <div style="width: 100%;  display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 20px;">
+        <div
+            style="width: 100%;  display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 20px;">
             <p
                 style="font-weight: 500; font-size: 14px; letter-spacing: 0.1px; margin-bottom: 16px; color: white; text-align: left; width: 100%;">
                 Call for papers</p>
 
-            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
-                <TabsSpeakerCallForPapersCard/>
-                <TabsSpeakerCallForPapersCard/>
-                <TabsSpeakerCallForPapersCard/>
+            <div class="papersCardsContainer" style="display: grid;  gap: 16px;">
+                <TabsSpeakerCallForPapersCard />
+                <TabsSpeakerCallForPapersCard />
+                <TabsSpeakerCallForPapersCard />
             </div>
         </div>
 
         <!-- Papers -->
-        <div style="width: 100%;  display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 20px;">
+        <div
+            style="width: 100%;  display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 20px;">
             <p
                 style="font-weight: 500; font-size: 14px; letter-spacing: 0.1px; margin-bottom: 16px; color: white; text-align: left; width: 100%;">
                 Papers</p>
 
-            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
-                <TabsSpeakerPapersCard/>
-                <TabsSpeakerPapersCard/>
+            <div class="papersCardsContainer" style="display: grid; gap: 16px;">
+                <TabsSpeakerPapersCard />
+                <TabsSpeakerPapersCard />
             </div>
         </div>
     </div>
@@ -165,3 +167,39 @@ const speakersData = [
     }
 ]
 </script>
+
+<style scoped>
+.main-container {
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+.speakers-container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: start;
+}
+
+.papersCardsContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media screen and (max-width: 640px) {
+    .papersCardsContainer {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .main-container {
+        padding: 1rem;
+    }
+
+    .speakers-container {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .speakers-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+</style>
