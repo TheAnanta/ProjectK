@@ -16,9 +16,17 @@
         }">
         </div>
 
-        <!-- Black Fade Image -->
-        <img src="/img/dashboard/blackFade.png" alt="Black fade"
+        <!-- Horizontal Black shade Image -->
+        <img src="/img/event/horizontal-black-shade.png" alt="Horizontal Black shade"
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+
+        <!-- Left Black shade Image -->
+        <img src="/img/event/left-black-shade.png" alt="Left Black shade"
+            style="position: absolute; top: 0; left: 0; height: 100%; object-fit: cover; z-index: 1;">
+
+        <!-- Right Black shade Image -->
+        <img src="/img/event/right-black-shade.png" alt="Right Black shade"
+            style="position: absolute; top: 0; right: 0; height: 100%; object-fit: cover; z-index: 1;">
 
         <!-- Content -->
         <div  style="display: flex; flex-direction: column; justify-content: start; align-items: start; position: absolute; bottom: 16px; left: 16px; z-index: 2; width: 100%; padding-right: 30px; gap: 12px;">
