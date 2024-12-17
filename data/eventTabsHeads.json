@@ -10,5 +10,9 @@
     {
         "id" : 3,
         "title" : "Agenda"
+    },
+    {
+        "id" : 4,
+        "title" : "Speakers"
     }
 ]

@@ -27,6 +27,9 @@
                                 <v-tabs-window-item value="AGENDA" style="width: 100%;">
                                     <TabsAgendaTab />
                                 </v-tabs-window-item>
+                                <v-tabs-window-item value="SPEAKERS" style="width: 100%;">
+                                    <TabsSpeakersTab />
+                                </v-tabs-window-item>
 
                             </v-tabs-window>
                         </v-card-text>
@@ -35,7 +38,7 @@
             </div>
             <!-- Floating Button | TODO: Modify this according to the Tab -->
             <v-fab 
-                :icon="tab === 0 ? 'mdi-pencil' : tab === 2 ? 'mdi-plus' : 'mdi-pencil'"
+                :icon="tab === 0 ? 'mdi-pencil' : tab === 2 || tab === 3 ? 'mdi-plus' : 'mdi-pencil'"
                 style="position: fixed; bottom: 50px; right: 70px; font-size: small; border-radius: 32% !important" 
                 :color="'#36343B'"
                 >
