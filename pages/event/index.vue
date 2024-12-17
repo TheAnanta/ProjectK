@@ -34,8 +34,12 @@
                 </div>
             </div>
             <!-- Floating Button | TODO: Modify this according to the Tab -->
-            <v-fab icon="mdi-pencil" variant="tonal"
-                style="position: fixed; bottom: 50px; right: 70px; font-size: small;" :color="'#D0BCFE'"></v-fab>
+            <v-fab 
+                :icon="tab === 0 ? 'mdi-pencil' : tab === 2 ? 'mdi-plus' : 'mdi-pencil'"
+                style="position: fixed; bottom: 50px; right: 70px; font-size: small; border-radius: 32% !important" 
+                :color="'#36343B'"
+                >
+            </v-fab>
         </NuxtLayout>
     </v-app>
 </template>
@@ -50,7 +54,7 @@ const router = useRouter();
 const isScrolled = ref(false);
 const scrollY = ref(0);
 const eventData = ref(null);
-const tab = ref('TICKETS')
+const tab = ref('GENERAL')
 // const {eventTabsHeads} = useJSONData();
 
 const eventDetails = [
@@ -121,9 +125,13 @@ onUnmounted(() => {
 
 const handleScroll = () => {
     scrollY.value = window.scrollY;
-    console.log('scroll value = ',window.scrollY );
+    // console.log('scroll value = ',window.scrollY );
     isScrolled.value = window.scrollY > 0;
-    console.log('isScrolled  = ', isScrolled.value);
+    // console.log('isScrolled  = ', isScrolled.value);
 };
+
+watch(tab, (val) => {
+    console.log('Changed tab value = ', val);
+})
 
 </script>
