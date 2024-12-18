@@ -7,7 +7,7 @@
                 style="font-weight: 500; font-size: 14px; letter-spacing: 0.1px; margin-bottom: 16px; color: white; text-align: left; width: 100%;">
                 Speakers</p>
 
-            <div class="speakers-container"
+            <div class="speakers-container" style="width: 100%;"
                 >
                 <TabsSpeakerCard v-for="(item, index) in speakersData" :key="index" :data="item" />
             </div>
