@@ -102,7 +102,7 @@ const props = defineProps({
     }
 });
 
-const windowWidth = ref(window.innerWidth);
+const windowWidth = ref();
 
 const handleResize = () => {
     windowWidth.value = window.innerWidth;

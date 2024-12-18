@@ -30,6 +30,9 @@
                                 <v-tabs-window-item value="SPEAKERS" style="width: 100%;">
                                     <TabsSpeakersTab />
                                 </v-tabs-window-item>
+                                <v-tabs-window-item value="VOLUNTEERS" style="width: 100%;">
+                                    <TabsVolunteerTab />
+                                </v-tabs-window-item>
 
                             </v-tabs-window>
                         </v-card-text>
@@ -57,7 +60,7 @@ const router = useRouter();
 const isScrolled = ref(false);
 const scrollY = ref(0);
 const eventData = ref(null);
-const tab = ref('GENERAL')
+const tab = ref('VOLUNTEERS')
 // const {eventTabsHeads} = useJSONData();
 
 const eventDetails = [

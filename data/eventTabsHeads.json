@@ -14,5 +14,9 @@
     {
         "id" : 4,
         "title" : "Speakers"
+    },
+    {
+        "id" : 5,
+        "title" : "Volunteers"
     }
 ]
