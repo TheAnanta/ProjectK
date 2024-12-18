@@ -3,11 +3,19 @@
         style="width: 109px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 16px; padding: 0 8px; margin-bottom: 2rem;">
 
         <!-- Volunter Img -->
-        <img class="volunteerImg" :src="data.imgURL" alt="Volunteer info" style="border-radius: 100%; object-fit: cover;">
+        <div style="position: relative;">
+            <img class="volunteerImg" :src="data.imgURL" alt="Volunteer info" style="border-radius: 100%; object-fit: cover;">
+            <v-icon v-if="data.verified" :size="'18px'" :color="'var(--quadnary-color)'" style="position: absolute; top: 0; right: 0px; ">mdi-check-decagram</v-icon>
+        </div>
+
+
 
         <!-- Name | Designation -->
         <div style="text-align: center; color: var(--secondary-txt-color)">
-            <p class="volunteerName" style="text-wrap: wrap; font-weight: 500;">{{ data.volunteerName }}</p>
+            <p class="volunteerName" style="text-wrap: wrap; font-weight: 500;">
+                {{ data.volunteerName }} 
+                <!-- <v-icon :size="'11px'" :color="'var(--quadnary-color)'">mdi-check-decagram</v-icon> -->
+            </p>
             <p class="volunteerDesignation" style="text-wrap: wrap; font-weight: 400;">{{ data.designation }}</p>
         </div>
     </div>
@@ -22,7 +30,8 @@ const props = defineProps({
         default: {
             imgURL: '',
             volunteerName: '',
-            designation: ''
+            designation: '',
+            verified: false
         }
     }
 });
