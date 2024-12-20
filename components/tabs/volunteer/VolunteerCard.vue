@@ -16,7 +16,7 @@
                 {{ data.volunteerName }} 
                 <!-- <v-icon :size="'11px'" :color="'var(--quadnary-color)'">mdi-check-decagram</v-icon> -->
             </p>
-            <p class="volunteerDesignation" style="text-wrap: wrap; font-weight: 400;">{{ data.designation }}</p>
+            <p class="volunteerDesignation" style="text-wrap: nowrap; font-weight: 400;">{{ data.designation }}</p>
         </div>
     </div>
 </template>

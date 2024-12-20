@@ -175,7 +175,7 @@ const speakersData = [
 
 .speakers-container {
     display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-columns: repeat(8, minmax(0, 1fr));
     align-items: start;
 }
 
@@ -193,13 +193,13 @@ const speakersData = [
     }
 
     .speakers-container {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 
 @media screen and (max-width: 400px) {
     .speakers-container {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 </style>

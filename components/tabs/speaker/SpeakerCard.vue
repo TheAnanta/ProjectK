@@ -1,6 +1,6 @@
 <template>
     <div
-        style="width: 109px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 16px; padding: 0 8px; margin-bottom: 2rem;">
+        style="width: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 16px; padding: 0 8px; margin-bottom: 2rem;">
 
         <!-- Speaker Img -->
         <img class="speakerImg" :src="data.imgURL" alt="Speaker info" style="border-radius: 100%; object-fit: cover;">
@@ -8,7 +8,7 @@
         <!-- Name | Designation -->
         <div style="text-align: center; color: var(--secondary-txt-color)">
             <p class="speakerName" style="text-wrap: wrap; font-weight: 500;">{{ data.speakerName }}</p>
-            <p class="speakerDesignation" style="text-wrap: wrap; font-weight: 400;">{{ data.designation }}</p>
+            <p class="speakerDesignation" style="text-wrap: nowrap; font-weight: 400;">{{ data.designation }}</p>
         </div>
     </div>
 </template>
