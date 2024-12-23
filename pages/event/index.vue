@@ -7,11 +7,12 @@
                 <div style="width: 100vw; position: relative;">
                     <!-- Navigation Bar -->
                     <div style="width: 100%; ;position: absolute; top: 0; left: 0; z-index: 3;">
-                        <Navbar :back-arrow="true" :bg-toogle="scrollY > 150 ? true : false"/>
+                        <Navbar :back-arrow="true" :bg-toogle="scrollY > 150 ? true : false" />
                     </div>
                     <EventPageHead :data="eventData" :is-scrolled="isScrolled" :scroll-y="scrollY" />
                     <v-card style="background-color: var(--secondary-bg-color); color: var(--primary-txt-color);">
-                        <v-tabs v-model="tab" align-tabs="center" :color="'#D0BCFE'" height="60px" style="border-bottom: 1px solid var(--tertiary-txt-color);" >
+                        <v-tabs v-model="tab" align-tabs="center" :color="'#D0BCFE'" height="60px"
+                            style="border-bottom: 1px solid var(--tertiary-txt-color);">
                             <v-tab v-for="(item, index) in eventTabsHeads" :key="index">{{ item.title }}</v-tab>
                         </v-tabs>
 
@@ -42,14 +43,14 @@
                     </v-card>
                 </div>
             </div>
-            <!-- Floating Button | TODO: Modify this according to the Tab -->
-            <v-fab 
-                :icon="tab === 0 ? 'mdi-pencil' : tab === 2 || tab === 3 ? 'mdi-plus' : 'mdi-pencil'"
-                style="position: fixed; bottom: 50px; right: 70px; font-size: small; border-radius: 32% !important" 
-                :color="'#36343B'"
-                >
-            </v-fab>
         </NuxtLayout>
+        <v-fab extended height="60"
+            style="position: fixed; bottom: 50px; right: 200px; font-size: small; z-index: 10; color: var(--quadnary-color) !important"
+            :color="'#36343B'">
+            <v-icon :color="'#D0BCFE'" style="margin-right: 6px;">{{ tab === 0 ? 'mdi-pencil' : tab === 2 || tab === 3 || tab === 4 || tab === 5 ?
+                'mdi-plus' : 'mdi-pencil' }}</v-icon>
+            <p :style="{ color: '#D0BCFE', fontWeight: '500', fontSize: '14px' }">{{tab === 0 ? "Add Modules" : tab === 1 ? "Add Tickets" : tab === 3 ? "Add Speakers" : tab === 4 ? "Add Volunteers" : tab === 5 ? "Add Sponsors" : ""}}</p>
+        </v-fab>
     </v-app>
 </template>
 
@@ -144,3 +145,9 @@ watch(tab, (val) => {
 })
 
 </script>
+
+<style scoped>
+.v-fab .v-fab--extended .v-btn{
+    border-radius: 18px !important;
+}
+</style>

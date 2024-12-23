@@ -56,10 +56,10 @@
 
             <v-row style="gap: 20px;">
                 <v-btn size="small" variant="tonal" style="background-color: var(--quadnary-color); border-radius: 100px; color: var(--secondary-color); font-size: 9px;">
-                    Host an event
+                    View Page
                 </v-btn>
                 <v-btn size="small" variant="outlined" style="border-color: #938F99; border-radius: 100px; color: var(--quadnary-color ); font-size: 9px;">
-                    Learn more
+                    Edit Event
                 </v-btn>
             </v-row>
         </v-col>
