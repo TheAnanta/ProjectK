@@ -172,7 +172,7 @@ const volunteersData = [
 
 .volunteers-container {
     display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-columns: repeat(8, minmax(0, 1fr));
     align-items: start;
 }
 
@@ -183,7 +183,7 @@ const volunteersData = [
     }
 
     .volunteers-container {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 
