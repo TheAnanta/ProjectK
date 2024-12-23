@@ -2,7 +2,7 @@
     <NuxtPage />
     <v-app>
         <NuxtLayout>
-            <div class="page" style="width: 100%; height: 100%">
+            <div class="page" style="width: 100%; height: 100%;">
                 <NavigationRail />
                 <Navbar />
                 <div class="page-content" style="width: 100vw; height: 360px;">
@@ -29,7 +29,12 @@
                     </v-col>
                 </div>
             </div>
+
         </NuxtLayout>
+
+        <v-fab extended prepend-icon="mdi-plus" text="Add Event"
+            style="position: fixed; bottom: 50px; right: 170px; font-size: small; border-radius: 32% !important; z-index: 10;"
+            :color="'#4F378B'"></v-fab>
     </v-app>
 </template>
 
