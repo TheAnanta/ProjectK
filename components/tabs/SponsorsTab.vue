@@ -1,5 +1,5 @@
 <template>
-    <div style="width: 100%; margin: 0px auto; display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 2rem; grid-row-gap: 20px;">
+    <div class="main-container" style="width: 100%; margin: 0px auto; display:grid; padding: 2rem; grid-row-gap: 20px;">
 
         <!-- Gold Sponsors -->
         <div style="width: 400px; display: flex; flex-direction: column; justify-content: start; align-items: start;">
@@ -59,3 +59,23 @@ const sponsorsList = [
     },
 ];
 </script>
+
+<style scoped>
+.main-container{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media screen and (max-width: 1042px) {
+    .main-container{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+}
+
+@media screen and (max-width: 840px) {
+    .main-container{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    
+}
+</style>

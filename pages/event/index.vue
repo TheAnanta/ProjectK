@@ -44,12 +44,14 @@
                 </div>
             </div>
         </NuxtLayout>
-        <v-fab extended height="60"
+        <v-fab :rounded="false" extended height="60"
             style="position: fixed; bottom: 50px; right: 200px; font-size: small; z-index: 10; color: var(--quadnary-color) !important"
             :color="'#36343B'">
-            <v-icon :color="'#D0BCFE'" style="margin-right: 6px;">{{ tab === 0 ? 'mdi-pencil' : tab === 2 || tab === 3 || tab === 4 || tab === 5 ?
+            <v-icon :color="'#D0BCFE'" style="margin-right: 6px;">{{ tab === 0 ? 'mdi-pencil' : tab === 2 || tab === 3
+                || tab === 4 || tab === 5 ?
                 'mdi-plus' : 'mdi-pencil' }}</v-icon>
-            <p :style="{ color: '#D0BCFE', fontWeight: '500', fontSize: '14px' }">{{tab === 0 ? "Add Modules" : tab === 1 ? "Add Tickets" : tab === 3 ? "Add Speakers" : tab === 4 ? "Add Volunteers" : tab === 5 ? "Add Sponsors" : ""}}</p>
+            <p :style="{ color: '#D0BCFE', fontWeight: '500', fontSize: '14px' }">{{ tab === 0 ? "Add Modules" : tab ===
+                1 ? "Add Tickets" : tab === 3 ? "Add Speakers" : tab === 4 ? "Add Volunteers" : tab === 5 ? "Add Sponsors" : ""}}</p>
         </v-fab>
     </v-app>
 </template>
@@ -147,7 +149,7 @@ watch(tab, (val) => {
 </script>
 
 <style scoped>
-.v-fab .v-fab--extended .v-btn{
+.v-fab--extended .v-btn{
     border-radius: 18px !important;
 }
 </style>
