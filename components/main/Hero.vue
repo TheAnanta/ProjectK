@@ -53,16 +53,16 @@
                 • ABCDE • ABCDE • ABCDE
             </p>
         </div>
-        <div class="pc-multer"
-            style="width: 100vw; height: 50px; background-color: var(--primary-color); padding: 0px 10px; justify-content: center; align-items: center; z-index: 10; position: relative;">
-            <p
-                style="color: white; font-size: 16px; font-weight: 500; text-wrap: nowrap; width: 100%; overflow: hidden;">
-                ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE
-                • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE
-                • ABCDE • ABCDE
-                • ABCDE • ABCDE • ABCDE
-            </p>
-        </div>
+    </div>
+    <div class="pc-multer"
+        style="width: 100vw; height: 50px; background-color: var(--primary-color); padding: 0px 10px; justify-content: center; align-items: center; z-index: 10; position: relative;">
+        <p
+            style="color: white; font-size: 16px; font-weight: 500; text-wrap: nowrap; width: 100%; overflow: hidden;">
+            ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE
+            • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE • ABCDE
+            • ABCDE • ABCDE
+            • ABCDE • ABCDE • ABCDE
+        </p>
     </div>
 
 </template>
