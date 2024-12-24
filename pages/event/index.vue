@@ -6,7 +6,7 @@
 
                 <div style="width: 100vw; position: relative;">
                     <!-- Navigation Bar -->
-                    <div style="width: 100%; ;position: absolute; top: 0; left: 0; z-index: 3;">
+                    <div style="width: 100%; position: absolute; top: 0; left: 0; z-index: 3;">
                         <Navbar :back-arrow="true" :bg-toogle="scrollY > 150 ? true : false" />
                     </div>
                     <EventPageHead :data="eventData" :is-scrolled="isScrolled" :scroll-y="scrollY" />
