@@ -120,7 +120,22 @@ const eventDetails = [
 const eventId = computed(() => Number(route.query.eventId));
 
 if (eventId.value) {
-    eventData.value = eventDetails.find((event) => event.id === eventId.value);
+    console.log('event id = ', eventId.value);
+    if (eventId.value === 300) {
+        eventData.value = {
+            id: 300,
+            title: 'Event Name',
+            subTitle: 'Event Subtitle',
+            eventDate: 'Event Date',
+            completed: false,
+            location: 'Event Location',
+            imgURL: '/img/event/non-event.png'
+        }
+    }
+    else {
+        eventData.value = eventDetails.find((event) => event.id === eventId.value);
+    }
+
 }
 
 if (!eventData.value) {
@@ -149,7 +164,7 @@ watch(tab, (val) => {
 </script>
 
 <style scoped>
-.v-fab--extended .v-btn{
+.v-fab--extended .v-btn {
     border-radius: 18px !important;
 }
 </style>
