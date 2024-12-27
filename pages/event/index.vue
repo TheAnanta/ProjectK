@@ -55,6 +55,7 @@
         </v-fab>
 
         <BottomSheetEventAgendaBottomSheet v-model:sheet="bottomSheetsRef[2]"/>
+        <BottomSheetEventSpeakerBottomSheet v-model:sheet="bottomSheetsRef[3]"/>
     </v-app>
 </template>
 
