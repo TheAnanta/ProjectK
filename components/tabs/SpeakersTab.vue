@@ -44,6 +44,7 @@
 
 <script setup>
 
+// Static DEMO data
 const speakersData = [
     {
         imgURL: 'https://s3-alpha-sig.figma.com/img/ad02/30e5/1cf72c468f60f22a06ee0b26b40e974f?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GCaQ8qpTks6x1Im5W-iOT76lBntVaHDVCvG10YMGDGh0Z6GcQsVs75MUV4HeM~DrYY41b9vN2MZQ5a2hk5zhzBJfLXWAbrq2gsfuVuvLwmgz4cwN8qHj030R1hr5MBpd4JhWriER1F5-9yOtLX6AeturXIdaeVbKe3lRnlbd4x375RsmQ7Qz4h~jzEsAmtAG9xDv6tQDMAi11Py2JP1uJRwOyIoEXYmIlBuTyHMcOlGIkafWWwmSPMQqhyLPJIvnGmfZ4jmKew0KSmvkIBnzJvy6KX5LIXuStkcrAyICz1AW9~~A4yroGy31Jd0EMEPtmV3OAarFXZxHnLRaAmu4OA__',
@@ -165,7 +166,39 @@ const speakersData = [
         speakerName: 'Michaelangelo Muchlongername',
         designation: 'SDE, PayPal'
     }
-]
+];
+
+// 📍 TODO: this get should only be called ONCE, when user arrives at event page specifically. 
+// And again GET can be done, if agenda data gets updated.
+// Mostly data may be needs to be passed from EVENT index page.
+/*
+onMounted(() => {
+    // @onMounted | call Cloud Function | Method : GET
+    const getSpeakersData = async () => {
+        try {
+            const response = await fetch('https://firebase/event/getSpeakers?eventID=101');
+            speakersData = await response.json();
+        } catch (error) {
+            console.error("Error Occured in getting agenda data : ", error);
+        }
+    };
+});
+*/
+
+// @click | call Cloud Function | Method : POST
+const onSave = async () => {
+    try {
+        const response = await fetch('https://firebase/event/addSpeakers', 
+            {
+                method: "POST",
+                body: JSON.stringify()
+            }
+        )
+    } catch (error) {
+        console.error("Error Occured in General Tab on Saving data : ", error);
+    }
+};
+
 </script>
 
 <style scoped>

@@ -23,7 +23,7 @@
                 </p>
 
                 <div style="display: flex; justify-content: start; align-items: start; gap: 20px; flex-wrap: nowrap;">
-                    <v-btn variant="tonal"
+                    <v-btn @click="router.push('/dashboard')" variant="tonal"
                         style="background-color: var(--quadnary-color); border-radius: 100px; color: var(--secondary-color);">
                         Host an event
                     </v-btn>
@@ -66,6 +66,10 @@
     </div>
 
 </template>
+
+<script setup>
+const router = useRouter();
+</script>
 
 <style scoped>
 .hero-container {
