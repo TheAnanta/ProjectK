@@ -25,6 +25,19 @@ watch(inputData, (newVal) => {
     console.log('Changed value = ', newVal.date);
 }, { deep: true });
 
+// @click | call Cloud Function | Method : POST
+const onSave = async () => {
+    try {
+        const response = await fetch('https://firebase/event/general', 
+            {
+                method: "POST",
+                body: JSON.stringify(inputData.value)
+            }
+        )
+    } catch (error) {
+        console.error("Error Occured in General Tab on Saving data : ", error);
+    }
+};
 
 
 </script>

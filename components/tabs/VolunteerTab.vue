@@ -162,7 +162,38 @@ const volunteersData = [
         designation: 'SDE, PayPal',
         verified: false
     }
-]
+];
+
+// 📍 TODO: this get should only be called ONCE, when user arrives at event page specifically. 
+// And again GET can be done, if agenda data gets updated.
+// Mostly data may be needs to be passed from EVENT index page.
+/*
+onMounted(() => {
+    // @onMounted | call Cloud Function | Method : GET
+    const getVolunteersData = async () => {
+        try {
+            const response = await fetch('https://firebase/event/getVolunteers?eventID=101');
+            volunteersData = await response.json();
+        } catch (error) {
+            console.error("Error Occured in getting agenda data : ", error);
+        }
+    };
+});
+*/
+
+// @click | call Cloud Function | Method : POST
+const onSave = async () => {
+    try {
+        const response = await fetch('https://firebase/event/addVolunteer', 
+            {
+                method: "POST",
+                body: JSON.stringify()
+            }
+        )
+    } catch (error) {
+        console.error("Error Occured in General Tab on Saving data : ", error);
+    }
+};
 </script>
 
 <style scoped>
