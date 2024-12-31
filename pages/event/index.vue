@@ -23,7 +23,7 @@
                                     <TabsGalleryTab />
                                 </v-tabs-window-item>
                                 <v-tabs-window-item value="TICKETS">
-                                    <!-- <TabsAgendaTab /> -->
+                                    <TabsTicketsTab/>
                                 </v-tabs-window-item>
                                 <v-tabs-window-item value="AGENDA" style="width: 100%;">
                                     <TabsAgendaTab />
