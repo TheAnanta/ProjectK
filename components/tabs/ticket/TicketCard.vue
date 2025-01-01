@@ -3,7 +3,7 @@
         style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
 
         <div
-            :style="{width: '100%', height: '140px', background: sold ? 'var(--quinary-bg-color)' : 'var(--tertiary-bg-color)', position: 'relative', borderRadius: '18px', display: flex, justifyContent: 'center', alignItems: 'center', padding: '12px',}">
+            :style="{width: '100%', height: '140px', background: ticketData.sold ? 'var(--quinary-bg-color)' : 'var(--tertiary-bg-color)', position: 'relative', borderRadius: '18px', display: flex, justifyContent: 'center', alignItems: 'center', padding: '12px',}">
 
             <!-- oval left -->
             <div
@@ -22,12 +22,11 @@
                 <!-- Left Most Content ( Ticket type | Date | Event mode ) -->
                 <div
                     style="display: flex; flex-direction: column; justify-content: start; align-items: start; gap: 2px;">
-                    <p style="font-weight: bold; font-size: 16px; text-transform: uppercase; color: white;">one day <br>
-                        ticket</p>
-                    <p style="font-weight: 500; font-size: 10px; color: white; opacity: 50%;">8th October</p>
+                    <p style="font-weight: bold; font-size: 16px; text-transform: uppercase; color: white; text-wrap: wrap;">{{ ticketData.title }}</p>
+                    <p style="font-weight: 500; font-size: 10px; color: white; opacity: 50%;">{{ ticketData.date }}</p>
                     <p
                         style="font-weight: 700; font-size: 10px; text-transform: uppercase; color: white; letter-spacing: 1px;">
-                        offline</p>
+                        {{ticketData.mode}}</p>
                 </div>
 
                 <!-- Right Most Content ( Price | Bar Code ) -->
@@ -36,7 +35,7 @@
                     <!-- Price + Tax ( Text ) -->
                     <div style="align-self: end;">
                         <p style="font-weight: 400; font-size: 8px; color: white; opacity: 50%;">inclusive of taxes</p>
-                        <p style="font-weight: bold; font-size: 26px; color: white;">₹500</p>
+                        <p style="font-weight: bold; font-size: 26px; color: white;">₹{{ ticketData.price }}</p>
                     </div>
 
                     <!-- Bar Code -->
@@ -47,12 +46,12 @@
 
         <!-- Sold Count | Edit | Delete Options -->
         <div
-            :style="{width: '100%', backgroundColor: sold ? 'var(--hexnary-bg-color)' : 'var(--quadnary-bg-color)', borderRadius: '18px', padding: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center',}"
+            :style="{width: '100%', backgroundColor: ticketData.sold ? 'var(--hexnary-bg-color)' : 'var(--quadnary-bg-color)', borderRadius: '18px', padding: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center',}"
         >   
             <div 
                 style="width: 60%; border: 2px dashed var(--primary-chip-color); border-radius: 18px; padding: 14px; display: flex; justify-content: center; align-items: center; align-self: self-start;"
             >
-                <p style="font-weight: 500px; font-size: 14px; letter-spacing: 1px; color: white; text-transform: uppercase;">{{ sold ? 'sold out' : '120 sold/500'}}</p>
+                <p style="font-weight: 500px; font-size: 14px; letter-spacing: 1px; color: white; text-transform: uppercase;">{{ ticketData.sold ? 'sold out' : ticketData.soldTicketCount + ' sold/' + ticketData.totalTicketsCount }}</p>
             </div>
 
             <div style="display: flex; flex: 1; justify-content: space-evenly; align-items: center;">
@@ -68,10 +67,18 @@
 
 <script setup>
 const props = defineProps({
-    sold: {
-        type: Boolean,
-        required: false,
-        default: false,
+    ticketData : {
+        type: Object,
+        required: true,
+        default :     {
+            title: '',
+            date: '',
+            mode: '',
+            price: 0,
+            totalTicketsCount: 0,
+            soldTicketCount: 0,
+            sold: false,
+    },
     }
 })
 </script>

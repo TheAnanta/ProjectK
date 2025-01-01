@@ -47,7 +47,7 @@
         <v-fab @click="toggleBottomSheet(parseInt(tab))" :rounded="false" extended height="60"
             style="position: fixed; bottom: 50px; right: 200px; font-size: small; z-index: 10; color: var(--quadnary-color) !important"
             :color="'#36343B'">
-            <v-icon :color="'#D0BCFE'" style="margin-right: 6px;">{{ tab === 0 ? 'mdi-pencil' : tab === 2 || tab === 3
+            <v-icon :color="'#D0BCFE'" style="margin-right: 6px;">{{ tab === 0 ? 'mdi-pencil' : tab === 1 || tab === 2 || tab === 3
                 || tab === 4 || tab === 5 ?
                 'mdi-plus' : 'mdi-pencil' }}</v-icon>
             <p :style="{ color: '#D0BCFE', fontWeight: '500', fontSize: '14px' }">{{ tab === 0 ? "Add Modules" : tab ===
