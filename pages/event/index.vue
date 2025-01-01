@@ -54,6 +54,7 @@
                 1 ? "Add Tickets" : tab === 3 ? "Add Speakers" : tab === 4 ? "Add Volunteers" : tab === 5 ? "Add Sponsors" : ""}}</p>
         </v-fab>
 
+        <BottomSheetEventTicketBottomSheet v-model:sheet="bottomSheetsRef[1]"/>
         <BottomSheetEventAgendaBottomSheet v-model:sheet="bottomSheetsRef[2]"/>
         <BottomSheetEventSpeakerBottomSheet v-model:sheet="bottomSheetsRef[3]"/>
         <BottomSheetEventVolunteerBottomSheet v-model:sheet="bottomSheetsRef[4]"/>
@@ -73,24 +74,6 @@ const eventData = ref(null);
 const tab = ref('GENERAL');
 
 const bottomSheetsRef = ref({
-    // 0 : {
-    //     generalBottomSheet : false,
-    // },
-    // 1 : {
-    //     ticketsBottomSheet : false,
-    // },
-    // 2 : {
-    //     agendaBottomSheet : false,
-    // },
-    // 3 : {
-    //     speakersBottomSheet : false,
-    // },
-    // 4 : {
-    //     volunteersBottomSheet : false,
-    // },
-    // 5 : {
-    //     sponsorsBottomSheet : false,
-    // },
     0 : false,
     1 : false,
     2 : false,
