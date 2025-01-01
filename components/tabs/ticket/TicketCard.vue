@@ -3,7 +3,7 @@
         style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
 
         <div
-            style="width: 100%; height: 140px; background: var(--tertiary-bg-color); position: relative; border-radius: 18px; display: flex; justify-content: center; align-items: center; padding: 12px;">
+            :style="{width: '100%', height: '140px', background: sold ? 'var(--quinary-bg-color)' : 'var(--tertiary-bg-color)', position: 'relative', borderRadius: '18px', display: flex, justifyContent: 'center', alignItems: 'center', padding: '12px',}">
 
             <!-- oval left -->
             <div
@@ -47,12 +47,12 @@
 
         <!-- Sold Count | Edit | Delete Options -->
         <div
-            style="width: 100%; background-color: var(--quadnary-bg-color); border-radius: 18px; padding: 14px; display: flex; justify-content: space-between; align-items: center;"
+            :style="{width: '100%', backgroundColor: sold ? 'var(--hexnary-bg-color)' : 'var(--quadnary-bg-color)', borderRadius: '18px', padding: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center',}"
         >   
             <div 
                 style="width: 60%; border: 2px dashed var(--primary-chip-color); border-radius: 18px; padding: 14px; display: flex; justify-content: center; align-items: center; align-self: self-start;"
             >
-                <p style="font-weight: 500px; font-size: 12px; letter-spacing: 1px; color: white;">120 sold/500</p>
+                <p style="font-weight: 500px; font-size: 14px; letter-spacing: 1px; color: white; text-transform: uppercase;">{{ sold ? 'sold out' : '120 sold/500'}}</p>
             </div>
 
             <div style="display: flex; flex: 1; justify-content: space-evenly; align-items: center;">
@@ -68,6 +68,16 @@
         </div>
     </div>
 </template>
+
+<script setup>
+const props = defineProps({
+    sold: {
+        type: Boolean,
+        required: false,
+        default: false,
+    }
+})
+</script>
 
 <style scoped>
 .card-container {
