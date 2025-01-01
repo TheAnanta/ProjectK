@@ -56,13 +56,10 @@
             </div>
 
             <div style="display: flex; flex: 1; justify-content: space-evenly; align-items: center;">
-
-                <v-icon>
-                    mdi-pencil-outline
-                </v-icon>
-                <v-icon>
-                    mdi-trash-can-outline
-                </v-icon>
+                <v-btn icon="mdi-pencil-outline" variant="text">
+                </v-btn>
+                <v-btn icon="mdi-trash-can-outline" variant="text">
+                </v-btn>
             </div>
 
         </div>
