@@ -23,7 +23,7 @@
                                     <TabsGalleryTab />
                                 </v-tabs-window-item>
                                 <v-tabs-window-item value="TICKETS">
-                                    <!-- <TabsAgendaTab /> -->
+                                    <TabsTicketsTab/>
                                 </v-tabs-window-item>
                                 <v-tabs-window-item value="AGENDA" style="width: 100%;">
                                     <TabsAgendaTab />
@@ -47,13 +47,14 @@
         <v-fab @click="toggleBottomSheet(parseInt(tab))" :rounded="false" extended height="60"
             style="position: fixed; bottom: 50px; right: 200px; font-size: small; z-index: 10; color: var(--quadnary-color) !important"
             :color="'#36343B'">
-            <v-icon :color="'#D0BCFE'" style="margin-right: 6px;">{{ tab === 0 ? 'mdi-pencil' : tab === 2 || tab === 3
+            <v-icon :color="'#D0BCFE'" style="margin-right: 6px;">{{ tab === 0 ? 'mdi-pencil' : tab === 1 || tab === 2 || tab === 3
                 || tab === 4 || tab === 5 ?
                 'mdi-plus' : 'mdi-pencil' }}</v-icon>
             <p :style="{ color: '#D0BCFE', fontWeight: '500', fontSize: '14px' }">{{ tab === 0 ? "Add Modules" : tab ===
                 1 ? "Add Tickets" : tab === 3 ? "Add Speakers" : tab === 4 ? "Add Volunteers" : tab === 5 ? "Add Sponsors" : ""}}</p>
         </v-fab>
 
+        <BottomSheetEventTicketBottomSheet v-model:sheet="bottomSheetsRef[1]"/>
         <BottomSheetEventAgendaBottomSheet v-model:sheet="bottomSheetsRef[2]"/>
         <BottomSheetEventSpeakerBottomSheet v-model:sheet="bottomSheetsRef[3]"/>
         <BottomSheetEventVolunteerBottomSheet v-model:sheet="bottomSheetsRef[4]"/>
@@ -73,24 +74,6 @@ const eventData = ref(null);
 const tab = ref('GENERAL');
 
 const bottomSheetsRef = ref({
-    // 0 : {
-    //     generalBottomSheet : false,
-    // },
-    // 1 : {
-    //     ticketsBottomSheet : false,
-    // },
-    // 2 : {
-    //     agendaBottomSheet : false,
-    // },
-    // 3 : {
-    //     speakersBottomSheet : false,
-    // },
-    // 4 : {
-    //     volunteersBottomSheet : false,
-    // },
-    // 5 : {
-    //     sponsorsBottomSheet : false,
-    // },
     0 : false,
     1 : false,
     2 : false,
